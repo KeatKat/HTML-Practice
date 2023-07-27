@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="forecast">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="weather" minOccurs="0" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="year" type="xsd:short" />
+                            <xsd:element name="month" type="xsd:byte" />
+                            <xsd:element name="date" type="xsd:byte" />
+                            <xsd:element name="dayOfWeek" type="xsd:string" />
+                            <xsd:element name="overall" type="xsd:string" />
+                            <xsd:element name="overallCode" type="xsd:string" />
+                            <xsd:element name="highest" type="xsd:byte" />
+                            <xsd:element name="lowest" type="xsd:byte" />
+                        </xsd:sequence>
+                        <xsd:attribute name="yyyymmdd" type="xsd:int" />
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="queryTime" type="xsd:string" />
+            <xsd:attribute name="queryLocation" type="xsd:string" />
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
